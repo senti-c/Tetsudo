@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            일본 철도 운행정보
+        </title>
+    </head>
+    <style>
+        div.title{
+            background-color: rgb(153,219,233);
+            padding: 16px;
+            font-size: 20px;
+            font-weight: bold;
+            
+        }
+        i#icon{
+            position: relative;
+            top: 5px;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div.nav{
+            display: inline-block;
+            transition: 0.5s;
+            overflow-x: hidden;
+            width: 0px;
+            white-space: nowrap;
+        }
+        div.tab{
+            background-color:rgb(255,170,170);
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <body>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <div class="title">
+            <i class="material-icons" id='icon' onclick="openTab();"> &#xE5D2;</i>
+            오미 철도 주식회사
+        </div>
+        <div>
+
+        </div>
+        <div class="nav" id="drawer">
+            <div class="tab">
+                개요
+            </div>
+            <div class="tab">
+                오미본선(本線)
+            </div>
+            <div class="tab">
+                타가선(多賀線)
+            </div>
+            <div class="tab">
+                요카이치선(八日市線)
+            </div>
+        </div>
+        <div>
+            <p>Copyright 2025 Sentic, All rights reserved.</p>
+        </div>
+        <script>
+            function openTab() {
+                var drawer = document.getElementById("drawer");
+                if (drawer.style.width != "260px") {
+                    drawer.style.width = "260px";
+                }
+                else{
+                    drawer.style.width = "0px";
+                }
+            }
+        </script>
+    </body>
+</html>
