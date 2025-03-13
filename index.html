@@ -6,6 +6,7 @@
         <title>
             일본 철도 운행정보
         </title>
+
     </head>
     <style>
         div.title{
@@ -13,11 +14,16 @@
             padding: 16px;
             font-size: 20px;
             font-weight: bold;
+            text-align:center;
+        }
+        div.title>i{
             
+            float: left;
+
         }
         i#icon{
             position: relative;
-            top: 5px;
+            /* top: 5px; */
         }
 
         body{
@@ -30,12 +36,16 @@
             overflow-x: hidden;
             width: 0px;
             white-space: nowrap;
+            position: fixed;
         }
         div.tab{
-            background-color:rgb(255,170,170);
+            background-color:rgba(255,170,170,0.3);
             padding: 20px;
             font-size: 20px;
             font-weight: bold;
+        }
+        div.jprw_content{
+            max-width: 768px;
         }
     </style>
     <body>
@@ -61,17 +71,32 @@
                 요카이치선(八日市線)
             </div>
         </div>
-        <div>
-            <p>Copyright 2025 Sentic, All rights reserved.</p>
+
+        <div id="kuma">
+            <div class="jprw_content" id="kirie">
+            이 사이트는 불특정다수가 편안함을 느끼기 위해 취미로 작성한 홈페이지입니다.
+            주인장 허락 없이 소스코드 가져가서 헛짓거리 하면 아주 매장될 줄 아세요.
+            철도에 관심 있는 사람, 철도를 좋아하는 사람, 철도 동호인들 일부 미친놈들 제외하고
+            편하게 참고하시길 바래요.
+            이곳에서 제공하는 정보와 관련하여, 해당 운영기관에 민원 등을 넣지 말아주세요.
+
+            </div>
+            <div>
+                <p>Copyright 2025 Sentic, All rights reserved.</p>
+            </div>
         </div>
         <script>
             function openTab() {
                 var drawer = document.getElementById("drawer");
+                var content = document.getElementById("kuma");
+            
                 if (drawer.style.width != "260px") {
                     drawer.style.width = "260px";
+                    content.style.marginLeft = "260px";
                 }
                 else{
                     drawer.style.width = "0px";
+                    content.style.marginLeft = "0px";
                 }
             }
         </script>
